@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.34c0e92b.css",
-    "main.js": "/react-gh-pages/static/js/main.fca771fc.js",
-    "static/media/logo.png": "/react-gh-pages/static/media/logo.11012dfdc20912a1a39b.png",
-    "index.html": "/react-gh-pages/index.html",
-    "main.34c0e92b.css.map": "/react-gh-pages/static/css/main.34c0e92b.css.map",
-    "main.fca771fc.js.map": "/react-gh-pages/static/js/main.fca771fc.js.map"
+    "main.css": "/memomry-card/static/css/main.34c0e92b.css",
+    "main.js": "/memomry-card/static/js/main.85f5bcb6.js",
+    "static/media/logo.png": "/memomry-card/static/media/logo.11012dfdc20912a1a39b.png",
+    "index.html": "/memomry-card/index.html",
+    "main.34c0e92b.css.map": "/memomry-card/static/css/main.34c0e92b.css.map",
+    "main.85f5bcb6.js.map": "/memomry-card/static/js/main.85f5bcb6.js.map"
   },
   "entrypoints": [
     "static/css/main.34c0e92b.css",
-    "static/js/main.fca771fc.js"
+    "static/js/main.85f5bcb6.js"
   ]
 }
