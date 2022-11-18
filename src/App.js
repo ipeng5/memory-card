@@ -1,31 +1,39 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
-import Cards from './components/Cards';
-import Scores from './components/Scores';
+import Main from './components/Main';
 
 function App() {
-  const CARD_NUMBER = 12;
+  const [cardNumber, setCardNumber] = useState(8);
   const [pokemons, setPokemons] = useState([]);
   const [choices, setChoices] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const loadCards = async () => {
-      setPokemons(shuffleCards(await fetchPokemons(CARD_NUMBER)));
+      setIsLoading(true);
+      setPokemons(shuffleCards(await fetchPokemons(cardNumber)));
+      setIsLoading(false);
     };
     loadCards();
-  }, [CARD_NUMBER]);
+  }, [cardNumber]);
 
   const fetchPokemons = async num => {
     const pokemonArr = [];
     for (let i = 1; i <= num; i++) {
-      const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-      const res = await fetch(url);
-      const data = await res.json();
-      const name = data.name[0].toUpperCase() + data.name.slice(1);
-      const img = data.sprites.other.dream_world.front_default;
-      pokemonArr.push({ name, img });
+      try {
+        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Problem getting pokemon data');
+        const data = await res.json();
+        const name = data.name[0].toUpperCase() + data.name.slice(1);
+        const img = data.sprites.other.dream_world.front_default;
+        pokemonArr.push({ name, img });
+      } catch (err) {
+        console.error(err.message);
+      }
     }
     return pokemonArr;
   };
@@ -43,6 +51,10 @@ function App() {
     setPokemons(shuffleCards(pokemons));
   };
 
+  const handleChangeMode = value => {
+    setCardNumber(value);
+  };
+
   useEffect(() => {
     if (currentScore > bestScore) setBestScore(currentScore);
   }, [currentScore, bestScore]);
@@ -55,8 +67,14 @@ function App() {
   return (
     <>
       <Header />
-      <Scores currentScore={currentScore} bestScore={bestScore} />
-      <Cards pokemons={pokemons} handleChoice={handleChoice} />
+      <Main
+        currentScore={currentScore}
+        bestScore={bestScore}
+        pokemons={pokemons}
+        handleChoice={handleChoice}
+        handleChangeMode={handleChangeMode}
+        isLoading={isLoading}
+      />
     </>
   );
 }

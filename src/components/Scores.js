@@ -1,11 +1,14 @@
 import React from 'react';
+import './Scores.css';
 
 export default function Scores(props) {
   return (
-    <div>
+    <>
       <div className="score">
-        Best: {props.bestScore}&nbsp;&nbsp;|&nbsp;&nbsp;Score: {props.currentScore}
+        <p>Score: {props.currentScore}</p>
+        <div>|</div>
+        <p>Best: {props.bestScore}</p>
       </div>
-    </div>
+    </>
   );
 }
