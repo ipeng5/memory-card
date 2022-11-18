@@ -6,9 +6,9 @@ import Scores from './components/Scores';
 function App() {
   const CARD_NUMBER = 12;
   const [pokemons, setPokemons] = useState([]);
-  const [score, setScore] = useState(0);
-  const [best, setBest] = useState(0);
-  const url = 'https://pokeapi.co/api/v2/pokemon/';
+  const [choices, setChoices] = useState([]);
+  const [currentScore, setCurrentScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   useEffect(() => {
     const loadCards = async () => {
@@ -34,11 +34,29 @@ function App() {
     return [...cards].sort(() => Math.random() - 0.5);
   };
 
+  const handleChoice = card => {
+    if (choices.includes(card.name)) resetGame();
+    else {
+      setCurrentScore(prevScore => prevScore + 1);
+    }
+    choices.push(card.name);
+    setPokemons(shuffleCards(pokemons));
+  };
+
+  useEffect(() => {
+    if (currentScore > bestScore) setBestScore(currentScore);
+  }, [currentScore, bestScore]);
+
+  const resetGame = () => {
+    setChoices([]);
+    setCurrentScore(0);
+  };
+
   return (
     <>
       <Header />
-      <Scores />
-      <Cards pokemons={pokemons} />
+      <Scores currentScore={currentScore} bestScore={bestScore} />
+      <Cards pokemons={pokemons} handleChoice={handleChoice} />
     </>
   );
 }

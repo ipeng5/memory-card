@@ -64,10 +64,11 @@ header img {
 
 .card-container {
   padding: 5rem 15vw;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
-  justify-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -95,7 +96,7 @@ header img {
 }
 
 .card img {
-  width: 80%;
+  width: 70%;
   transform: translateY(-2rem);
 }
 
