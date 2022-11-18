@@ -1,11 +1,113 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+:root {
+  --color-bg-header: #ea524f;
+  --color-bg-body: #f0e8e8;
+  --color-bg-card: #f7de002c;
+  --color-text: #505053;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-bg-body);
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  background-color: var(--color-bg-header);
+  height: 25rem;
+  border-bottom: 2.5rem solid var(--color-text);
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  height: 15rem;
+  transform: translateY(2rem);
+}
+
+.ball {
+  position: absolute;
+  box-sizing: content-box;
+  background-color: var(--color-text);
+  width: 5rem;
+  height: 5rem;
+  border: 2rem solid white;
+  outline: 2rem solid var(--color-text);
+  left: 50%;
+  transform: translate(-50%, 19rem);
+  border-radius: 50%;
+}
+
+.score {
+  color: var(--color-text);
+  font-size: 5rem;
+  font-weight: 500;
+  margin-top: 4rem;
+  margin-left: 5rem;
+}
+
+.card-container {
+  padding: 5rem 15vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 3rem;
+  justify-items: center;
+}
+
+.card {
+  position: relative;
+  background-color: var(--color-bg-card);
+  width: 25rem;
+  height: 35rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 5px 10px 18px rgb(0, 0, 0, 0.35);
+  transition: 0.3s;
+  border: 1rem solid var(--color-bg-body);
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card:active {
+  transform: scale(1);
+}
+
+.card img {
+  width: 80%;
+  transform: translateY(-2rem);
+}
+
+.card p {
+  position: absolute;
+  bottom: 0;
+  font-size: 2.8rem;
+  padding: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.31rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
 }
