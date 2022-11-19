@@ -73,8 +73,6 @@
 
   .card {
     border-radius: 0.5rem;
-    width: 13vh;
-    height: 17vh;
     padding: 3rem 0;
   }
 }
@@ -85,6 +83,8 @@
   }
 
   .card {
+    width: 100px;
+    height: 150px;
     padding: 2rem 0;
     box-shadow: var(--box-shadow-phone);
   }

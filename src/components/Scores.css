@@ -21,6 +21,10 @@
   .score {
     font-size: 1.8rem;
   }
+
+  .score div {
+    margin: 0 2rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
