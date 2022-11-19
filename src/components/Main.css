@@ -21,7 +21,7 @@ main {
   opacity: 0.9;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1400px) {
   main {
     padding-top: 16.5rem;
   }

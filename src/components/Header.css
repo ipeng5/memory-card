@@ -27,7 +27,7 @@ header img {
   border-radius: 50%;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1400px) {
   header {
     height: 10rem;
     border-bottom: 0.8rem solid var(--color-text);

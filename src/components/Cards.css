@@ -48,7 +48,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1400px) {
   .card-container {
     padding: 3rem 5rem;
     display: flex;
@@ -59,8 +59,6 @@
   }
 
   .card {
-    border-radius: 0.5rem;
-    padding: 3rem 0;
     border: 0.5rem solid var(--color-bg-body);
   }
 
@@ -78,9 +76,10 @@
   }
 
   .card {
-    width: 12vh;
-    height: 15vh;
-    padding: 2.2rem 0;
+    border-radius: 0.5rem;
+    width: 13vh;
+    height: 17vh;
+    padding: 3rem 0;
   }
 }
 @media screen and (max-width: 600px) {

@@ -22,7 +22,7 @@
   outline: 0.8rem solid #ffc503;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1400px) {
   .mode-buttons input:checked + label {
     outline: 0.5rem solid #ffc503;
   }
