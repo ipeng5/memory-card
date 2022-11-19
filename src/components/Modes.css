@@ -1,15 +1,15 @@
 .mode-buttons {
-  margin-left: 10rem;
+  margin-left: 5rem;
 }
 
 .mode-buttons label {
   color: white;
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 500;
-  background-color: var(--color-bg-header);
-  box-shadow: var(--box-shadow);
-  padding: 1rem 3rem;
-  margin: 1.5rem;
+  background-color: var(--color-bg-btn);
+
+  padding: 0.8rem 2rem;
+  margin: 1rem;
   border-radius: 0.8rem;
   cursor: pointer;
 }
@@ -19,31 +19,20 @@
 }
 
 .mode-buttons input:checked + label {
-  outline: 0.8rem solid #ffc503;
+  background-color: var(--color-bg-header);
 }
 
-@media screen and (max-width: 1400px) {
-  .mode-buttons input:checked + label {
-    outline: 0.5rem solid #ffc503;
-  }
-
+@media screen and (max-width: 1200px) {
   .mode-buttons label {
     font-size: 1.6rem;
-    box-shadow: none;
   }
 }
 
 @media screen and (max-width: 900px) {
   .mode-buttons label {
     font-size: 1.4rem;
-    font-weight: 500;
     padding: 0.5rem 2rem;
     border-radius: 0.5rem;
-    margin: 1rem;
-  }
-
-  .mode-buttons input:checked + label {
-    outline: 0.3rem solid #ffc503;
   }
 }
 

@@ -9,8 +9,8 @@
 .card {
   position: relative;
   background-color: var(--color-bg-card);
-  width: 16rem;
-  height: 20rem;
+  width: 14rem;
+  height: 18rem;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@
   overflow: hidden;
   box-shadow: var(--box-shadow);
   transition: 0.3s;
-  border: 0.8rem solid var(--color-bg-body);
+  border: 0.5rem solid var(--color-bg-body);
 }
 
 .card:hover {
@@ -48,7 +48,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
   .card-container {
     padding: 3rem 5rem;
     display: flex;
@@ -56,10 +56,6 @@
     gap: 3rem;
     justify-content: center;
     align-items: center;
-  }
-
-  .card {
-    border: 0.5rem solid var(--color-bg-body);
   }
 
   .card p {

@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 
 function App() {
-  const [cardNumber, setCardNumber] = useState(8);
+  const [cardNumber, setCardNumber] = useState(6);
   const [pokemons, setPokemons] = useState([]);
   const [choices, setChoices] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
@@ -12,6 +12,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    resetGame();
     const loadCards = async () => {
       setIsLoading(true);
       setPokemons(shuffleCards(await fetchPokemons(cardNumber)));

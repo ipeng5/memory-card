@@ -21,14 +21,19 @@ main {
   opacity: 0.9;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
+  .info {
+    height: 8rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
   main {
     padding-top: 16.5rem;
   }
 
   .info {
     top: 10rem;
-    height: 8rem;
   }
 }
 

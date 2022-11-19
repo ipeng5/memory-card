@@ -10,6 +10,7 @@
 
 :root {
   --color-bg-header: #ea524f;
+  --color-bg-btn: #1c4284;
   --color-bg-body: #f0e8e8;
   --color-bg-card: #efe2bd;
   --color-text: #505053;
@@ -28,4 +29,5 @@ body {
   position: relative;
   font-family: 'Montserrat', sans-serif;
   font-variant-numeric: tabular-nums;
+  overflow: overlay;
 }

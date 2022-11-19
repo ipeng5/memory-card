@@ -4,7 +4,7 @@ import './Modes.css';
 export default function Modes(props) {
   return (
     <div onChange={e => props.handleChangeMode(e.target.value)} className="mode-buttons">
-      <input type="radio" name="mode" id="easy" value="8" defaultChecked />
+      <input type="radio" name="mode" id="easy" value="6" defaultChecked />
       <label htmlFor="easy">Easy</label>
       <input type="radio" name="mode" id="medium" value="18" />
       <label htmlFor="medium">Medium</label>
