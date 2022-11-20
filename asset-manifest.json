@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/memory-card/static/css/main.a5f082ab.css",
+    "main.css": "/memory-card/static/css/main.f6639240.css",
     "main.js": "/memory-card/static/js/main.36c9b448.js",
     "static/media/logo.png": "/memory-card/static/media/logo.39b3ca586d597559d942.png",
     "index.html": "/memory-card/index.html",
-    "main.a5f082ab.css.map": "/memory-card/static/css/main.a5f082ab.css.map",
+    "main.f6639240.css.map": "/memory-card/static/css/main.f6639240.css.map",
     "main.36c9b448.js.map": "/memory-card/static/js/main.36c9b448.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5f082ab.css",
+    "static/css/main.f6639240.css",
     "static/js/main.36c9b448.js"
   ]
 }
