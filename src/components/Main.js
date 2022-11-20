@@ -11,7 +11,8 @@ export default function Main(props) {
         <Modes handleChangeMode={props.handleChangeMode} />
         <Scores currentScore={props.currentScore} bestScore={props.bestScore} />
       </div>
-      <Cards pokemons={props.pokemons} handleChoice={props.handleChoice} />
+      {props.isLoading && <div className="loading">Loading...</div>}
+      {!props.isLoading && <Cards pokemons={props.pokemons} handleChoice={props.handleChoice} />}
     </main>
   );
 }

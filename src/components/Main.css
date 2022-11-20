@@ -21,6 +21,10 @@ main {
   opacity: 0.9;
 }
 
+.loading {
+  font-size: 3rem;
+}
+
 @media screen and (max-width: 1600px) {
   .info {
     height: 8rem;
@@ -57,5 +61,9 @@ main {
     justify-content: center;
     height: 9rem;
     gap: 1.8rem;
+  }
+
+  .loading {
+    font-size: 2rem;
   }
 }

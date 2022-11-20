@@ -1,0 +1,50 @@
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-end {
+  background-color: var(--color-bg-header);
+  border-radius: 20px;
+  padding: 3rem 6rem;
+  font-size: 3rem;
+  color: white;
+  background-color: var(--color-bg-header);
+  border: 10px solid var(--color-bg-btn);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.game-end button {
+  color: white;
+  font-size: 3rem;
+  background-color: var(--color-bg-btn);
+  padding: 1.5rem 4rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .game-end {
+    padding: 4.5rem 2.5rem;
+    font-size: 1.5rem;
+    color: white;
+    border: 6px solid var(--color-bg-btn);
+    gap: 15px;
+  }
+
+  .game-end button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+}

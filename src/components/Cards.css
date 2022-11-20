@@ -8,9 +8,9 @@
 
 .card {
   position: relative;
-  background-color: var(--color-bg-card);
-  width: 14rem;
-  height: 18rem;
+  background: var(--color-bg-card);
+  width: 18rem;
+  height: 25rem;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@
   overflow: hidden;
   box-shadow: var(--box-shadow);
   transition: 0.3s;
-  border: 0.5rem solid var(--color-bg-body);
+  border: 0.5rem solid var(--color-border-card);
 }
 
 .card:hover {
@@ -32,7 +32,8 @@
 }
 
 .card img {
-  width: 90%;
+  width: 15rem;
+  height: 15rem;
   transform: translateY(-2rem);
 }
 
@@ -72,8 +73,11 @@
   }
 
   .card {
-    border-radius: 0.5rem;
     padding: 3rem 0;
+  }
+
+  .card img {
+    transform: translateY(-1rem);
   }
 }
 @media screen and (max-width: 600px) {
@@ -87,10 +91,13 @@
     height: 150px;
     padding: 2rem 0;
     box-shadow: var(--box-shadow-phone);
+    border: 2px solid var(--color-border-card);
   }
 
   .card img {
-    transform: translateY(-1.2rem);
+    width: 85px;
+    height: 85px;
+    transform: translateY(-5px);
   }
 
   .card p {

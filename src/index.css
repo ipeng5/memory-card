@@ -12,7 +12,8 @@
   --color-bg-header: #ea524f;
   --color-bg-btn: #1c4284;
   --color-bg-body: #f0e8e8;
-  --color-bg-card: #efe2bd;
+  --color-bg-card: radial-gradient(#efe2bd, #ffbb4699);
+  --color-border-card: #ccc;
   --color-text: #505053;
   --box-shadow: 5px 10px 18px rgb(0, 0, 0, 0.35);
   --box-shadow-active: 5px 10px 10px rgb(0, 0, 0, 0.35);
