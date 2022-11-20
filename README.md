@@ -21,4 +21,4 @@ npm start
 
 ## Screenshots
 
-![Memory card game](https://i.imgur.com/Hjz2HZo.png)
+![Memory card game](https://i.imgur.com/fUKpJqn.png)
