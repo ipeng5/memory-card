@@ -1,5 +1,5 @@
 .overlay {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
 }
 
 .game-end {
@@ -26,6 +27,7 @@
 }
 
 .game-end button {
+  border: none;
   color: white;
   font-size: 3rem;
   background-color: var(--color-bg-btn);
