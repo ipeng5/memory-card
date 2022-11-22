@@ -12,6 +12,7 @@ export default function Main(props) {
         <Scores currentScore={props.currentScore} bestScore={props.bestScore} />
       </div>
       {props.isLoading && <div className="loading">Loading...</div>}
+      {props.error && <div className="loading">{props.error}</div>}
       {!props.isLoading && <Cards pokemons={props.pokemons} handleChoice={props.handleChoice} />}
     </main>
   );

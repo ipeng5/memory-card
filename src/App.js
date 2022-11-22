@@ -12,6 +12,7 @@ function App() {
   const [bestScore, setBestScore] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [gameEnd, setGameEnd] = useState(false);
+  const [error, setError] = useState(null);
 
   const random = () => {
     return Math.floor(Math.random() * 800) + 1;
@@ -26,13 +27,16 @@ function App() {
         const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         setIsLoading(true);
         const res = await fetch(url);
-        if (!res.ok) throw new Error('Problem getting pokemon data');
+        if (!res.ok) throw new Error(res.statusText);
         const data = await res.json();
         setIsLoading(false);
         const name = data.name[0].toUpperCase() + data.name.slice(1);
         const img = data.sprites.other['official-artwork'].front_default;
         pokemonArr.push({ name, img });
+        setError(null);
       } catch (err) {
+        setIsLoading(false);
+        setError('Could not fetch the data');
         console.error(err.message);
       }
     }
@@ -96,6 +100,7 @@ function App() {
         isLoading={isLoading}
         gameEnd={gameEnd}
         resetGame={resetGame}
+        error={error}
       />
     </>
   );
